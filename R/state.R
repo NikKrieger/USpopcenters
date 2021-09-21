@@ -25,6 +25,9 @@
 #'
 #'   }
 #'
+#' @section US census data terms of service:
+#' \url{https://www.census.gov/data/developers/about/terms-of-service.html>}
+#'
 #' @seealso Other 2010 census centers of population: \code{\link{county2010}};
 #'   \code{\link{tract2010}}; \code{\link{block_group2010}};
 #'   \code{\link{US_mean_center2010}}; \code{\link{US_median_center2010}}
@@ -80,6 +83,9 @@
 #'   (centroid) of the state (positive is east; negative is west)}
 #'
 #'   }
+#'
+#' @section US census data terms of service:
+#' \url{https://www.census.gov/data/developers/about/terms-of-service.html>}
 #'
 #' @seealso Other 2000 census centers of population: \code{\link{county2000}};
 #'   \code{\link{tract2000}}; \code{\link{block_group2000}};

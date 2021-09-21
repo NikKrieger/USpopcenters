@@ -33,6 +33,11 @@ A data set of the latitude and longitude coordinates of the \strong{median}
 center of population (centroid) of the United States. The total US
 populations according to the 2010 decennial census is also included.
 }
+\section{US census data terms of service}{
+
+\url{https://www.census.gov/data/developers/about/terms-of-service.html>}
+}
+
 \examples{
 US_median_center2010
 }

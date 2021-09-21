@@ -51,6 +51,11 @@ American Samoa, Guam, the Northern Mariana Islands, and the US Virgin
 Islands. Also unlike \code{\link{county2010}}, \code{county2000} does not
 contain the \code{STNAME} (state name) column.
 }
+\section{US census data terms of service}{
+
+\url{https://www.census.gov/data/developers/about/terms-of-service.html>}
+}
+
 \examples{
 county2000
 }

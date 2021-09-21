@@ -47,6 +47,11 @@ value for both \code{LATITUDE} and \code{LONGITUDE}}.
 Unlike \code{\link{county2000}}, \code{tract2000} does not contain data from
 American Samoa, Guam, the Northern Mariana Islands, or the US Virgin Islands.
 }
+\section{US census data terms of service}{
+
+\url{https://www.census.gov/data/developers/about/terms-of-service.html>}
+}
+
 \examples{
 tract2000
 }

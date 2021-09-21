@@ -53,6 +53,11 @@ dictionary} reports. The data dictionary's version of the column names were
 used, since they are consistent with the majority of the other data files and
 data dictionaries on the census website.
 }
+\section{US census data terms of service}{
+
+\url{https://www.census.gov/data/developers/about/terms-of-service.html>}
+}
+
 \examples{
 state2000
 }

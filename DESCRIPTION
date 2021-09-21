@@ -6,7 +6,7 @@ Authors@R:
            family = "Krieger",
            role = c("aut", "cre"),
            email = "nk@case.edu")
-Description: Center of population (centroid) data for census areas in the
+Description: Centers of population (centroid) data for census areas in the
     United States.
 License: CC0
 URL: 

@@ -46,6 +46,11 @@ population (centroids) of census block groups in the US states plus the
 District of Columbia and Puerto Rico. Populations according to the 2010
 decennial census are also included.
 }
+\section{US census data terms of service}{
+
+\url{https://www.census.gov/data/developers/about/terms-of-service.html>}
+}
+
 \examples{
 block_group2010
 }
