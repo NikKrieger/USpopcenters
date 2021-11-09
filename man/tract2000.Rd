@@ -49,7 +49,7 @@ American Samoa, Guam, the Northern Mariana Islands, or the US Virgin Islands.
 }
 \section{US census data terms of service}{
 
-\url{https://www.census.gov/data/developers/about/terms-of-service.html>}
+\url{https://www.census.gov/data/developers/about/terms-of-service.html}
 }
 
 \examples{

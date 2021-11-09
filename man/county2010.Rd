@@ -52,7 +52,7 @@ Also unlike \code{\link{county2010}}, it contains the the state name column
 }
 \section{US census data terms of service}{
 
-\url{https://www.census.gov/data/developers/about/terms-of-service.html>}
+\url{https://www.census.gov/data/developers/about/terms-of-service.html}
 }
 
 \examples{

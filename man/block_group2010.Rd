@@ -48,7 +48,7 @@ decennial census are also included.
 }
 \section{US census data terms of service}{
 
-\url{https://www.census.gov/data/developers/about/terms-of-service.html>}
+\url{https://www.census.gov/data/developers/about/terms-of-service.html}
 }
 
 \examples{

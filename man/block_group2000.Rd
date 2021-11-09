@@ -64,7 +64,7 @@ data dictionaries on the census website.
 }
 \section{US census data terms of service}{
 
-\url{https://www.census.gov/data/developers/about/terms-of-service.html>}
+\url{https://www.census.gov/data/developers/about/terms-of-service.html}
 }
 
 \examples{
