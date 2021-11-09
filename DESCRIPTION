@@ -1,6 +1,6 @@
 Package: USpopcenters
 Title: United States Centers of Population (Centroids)
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: 
     person(given = "Nik",
            family = "Krieger",

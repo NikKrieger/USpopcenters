@@ -1,5 +1,5 @@
 
-# Development version
+# USpopcenters 0.1.1
 
 Update to fix character encoding issue, which broke a handful of accented characters in the `COUNAME` column of `county2010` and `county2000`
 
