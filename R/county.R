@@ -35,7 +35,7 @@
 #'   }
 #'
 #' @section US census data terms of service:
-#' \url{https://www.census.gov/data/developers/about/terms-of-service.html>}
+#' \url{https://www.census.gov/data/developers/about/terms-of-service.html}
 #'
 #' @seealso Other 2010 census centers of population: \code{\link{state2010}};
 #'   \code{\link{tract2010}}; \code{\link{block_group2010}};
@@ -93,7 +93,7 @@
 #'   }
 #'
 #' @section US census data terms of service:
-#' \url{https://www.census.gov/data/developers/about/terms-of-service.html>}
+#' \url{https://www.census.gov/data/developers/about/terms-of-service.html}
 #'
 #' @seealso Other 2000 census centers of population: \code{\link{state2000}};
 #'   \code{\link{tract2000}}; \code{\link{block_group2000}}

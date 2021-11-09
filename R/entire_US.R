@@ -19,7 +19,7 @@
 #'   }
 #'
 #' @section US census data terms of service:
-#' \url{https://www.census.gov/data/developers/about/terms-of-service.html>}
+#' \url{https://www.census.gov/data/developers/about/terms-of-service.html}
 #'
 #' @seealso \strong{Median} center of population of the US:
 #'   \code{\link{US_median_center2010}}
@@ -62,7 +62,7 @@
 #'   }
 #'
 #' @section US census data terms of service:
-#' \url{https://www.census.gov/data/developers/about/terms-of-service.html>}
+#' \url{https://www.census.gov/data/developers/about/terms-of-service.html}
 #'
 #' @seealso \strong{Mean} center of population of the US:
 #'   \code{\link{US_mean_center2010}}
