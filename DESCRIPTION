@@ -1,6 +1,6 @@
 Package: USpopcenters
 Title: United States Centers of Population (Centroids)
-Version: 0.1.1
+Version: 0.2.0
 Authors@R: 
     person(given = "Nik",
            family = "Krieger",
@@ -20,4 +20,4 @@ Suggests:
 Encoding: UTF-8
 LazyData: true
 LazyDataCompression: xz
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3

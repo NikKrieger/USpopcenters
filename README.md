@@ -4,17 +4,17 @@
 # USpopcenters
 
 <!-- badges: start -->
-
 <!-- badges: end -->
 
 USpopcenters contains data on the centers of population (also known as
 “centroids”) of census areas in the United States.
 
-Centers of population are according to the 2000 and 2010 decennial
-censuses. They are given via **longitude and latitude** coordinates and
-are available at the level of **state**, **county**, **tract**, and
-**block group**. The mean and median centers of population of the entire
-US according to the 2010 census are also included in this package.
+Centers of population are according to the 2020, 2010, and 2000
+decennial censuses. They are given via **longitude and latitude**
+coordinates and are available at the level of **state**, **county**,
+**tract**, and **block group**. The mean and median centers of
+population of the entire US according to the 2020 and 2010 censuses are
+also included in this package.
 
 All these data are available in this package in the form of
 [`tibble`s](https://github.com/tidyverse/tibble). Each year/geography
@@ -25,7 +25,7 @@ also contain state and county names.
 
 All applicable tables contain data from the fifty states and the
 District of Columbia. Non-state island territories’ data has
-inconsistent availability from data set to data set. See each `tibble`’s
+inconsistent availability from dataset to dataset. See each `tibble`’s
 documentation page to see what each one actually contains.
 
 This package was created primarily because the US Census Bureau has not
@@ -69,7 +69,7 @@ county2010
 #>  8 01      015      Calhoun  Alabama     118572     33.7     -85.8
 #>  9 01      017      Chambers Alabama      34215     32.9     -85.3
 #> 10 01      019      Cherokee Alabama      25989     34.2     -85.6
-#> # … with 3,211 more rows
+#> # ℹ 3,211 more rows
 ```
 
 ## US census data terms of service

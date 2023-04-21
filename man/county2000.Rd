@@ -46,14 +46,15 @@ the 2000 decennial census are also included.
 \details{
 This had to be stitched together from separate state files.
 
-Unlike \code{\link{county2010}}, \code{county2000} contains data from
-American Samoa, Guam, the Northern Mariana Islands, and the US Virgin
-Islands. Also unlike \code{\link{county2010}}, \code{county2000} does not
-contain the \code{STNAME} (state name) column.
+Unlike \code{\link{county2020}} and \code{\link{county2010}},
+\code{county2000} contains data from American Samoa, Guam, the Northern
+Mariana Islands, and the US Virgin Islands. Also unlike
+\code{\link{county2020}} and \code{\link{county2010}}, \code{county2000} does
+not contain the \code{STNAME} (state name) column.
 }
 \section{US census data terms of service}{
 
-\url{https://www.census.gov/data/developers/about/terms-of-service.html}
+  \url{https://www.census.gov/data/developers/about/terms-of-service.html}
 }
 
 \examples{
@@ -67,5 +68,10 @@ Other 2000 census centers of population: \code{\link{state2000}};
   \code{\link{county2010}}; \code{\link{tract2010}};
   \code{\link{block_group2010}}; \code{\link{US_mean_center2010}};
   \code{\link{US_median_center2010}}
+
+  2020 census centers of population: \code{\link{state2020}};
+  \code{\link{county2020}}; \code{\link{tract2020}};
+  \code{\link{block_group2020}}; \code{\link{US_mean_center2020}};
+  \code{\link{US_median_center2020}}
 }
 \keyword{datasets}

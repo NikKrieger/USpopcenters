@@ -1,3 +1,4 @@
+library(here)
 library(usethis)
 library(tidyverse)
 
@@ -8,6 +9,19 @@ readr_guess_encoding <- function(file, ..., .fn = read_csv) {
 
 ##############################################################################
 # State
+state2020 <-
+  readr_guess_encoding(
+    "https://www2.census.gov/geo/docs/reference/cenpop2020/CenPop2020_Mean_ST.txt",
+    col_types =
+      cols(
+        STATEFP = "c",
+        STNAME = "c",
+        POPULATION = "i",
+        LATITUDE = "d",
+        LONGITUDE = "d"
+      )
+  )
+
 state2010 <-
   readr_guess_encoding(
     "https://www2.census.gov/geo/docs/reference/cenpop2010/CenPop2010_Mean_ST.txt",
@@ -52,6 +66,21 @@ state2000 <-
 # ###########################################################################
 # County
 
+county2020 <-
+  readr_guess_encoding(
+    "https://www2.census.gov/geo/docs/reference/cenpop2020/county/CenPop2020_Mean_CO.txt",
+    col_types =
+      cols(
+        STATEFP = "c",
+        COUNTYFP = "c",
+        COUNAME = "c",
+        STNAME = "c",
+        POPULATION = "i",
+        LATITUDE = "d",
+        LONGITUDE = "d"
+      )
+  )
+
 county2010 <-
   readr_guess_encoding(
     "https://www2.census.gov/geo/docs/reference/cenpop2010/county/CenPop2010_Mean_CO.txt",
@@ -91,6 +120,21 @@ county2000 <-
 
 # ###########################################################################
 # Tract
+
+tract2020 <-
+  readr_guess_encoding(
+    "https://www2.census.gov/geo/docs/reference/cenpop2020/tract/CenPop2020_Mean_TR.txt",
+    col_types =
+      cols(
+        STATEFP = "c",
+        COUNTYFP = "c",
+        TRACTCE = "c",
+        POPULATION = "i",
+        LATITUDE = "d",
+        LONGITUDE = "d"
+      )
+  )
+
 tract2010 <-
   readr_guess_encoding(
     "https://www2.census.gov/geo/docs/reference/cenpop2010/tract/CenPop2010_Mean_TR.txt",
@@ -124,6 +168,22 @@ tract2000 <-
 
 # ###########################################################################
 # Block group
+
+block_group2020 <-
+  readr_guess_encoding(
+    "https://www2.census.gov/geo/docs/reference/cenpop2020/blkgrp/CenPop2020_Mean_BG.txt",
+    col_types =
+      cols(
+        STATEFP = "c",
+        COUNTYFP = "c",
+        TRACTCE = "c",
+        BLKGRPCE = "c",
+        POPULATION = "i",
+        LATITUDE = "d",
+        LONGITUDE = "d"
+      )
+  )
+
 block_group2010 <-
   readr_guess_encoding(
     "https://www2.census.gov/geo/docs/reference/cenpop2010/blkgrp/CenPop2010_Mean_BG.txt",
@@ -173,6 +233,17 @@ block_group2000 <-
 
 ################################################################################
 # US overall
+US_mean_center2020 <-
+  readr_guess_encoding("https://www2.census.gov/geo/docs/reference/cenpop2020/CenPop2020_Mean_US.txt",
+                       col_types = cols(POPULATION = "i", LATITUDE = "d", LONGITUDE = "d")
+  )
+
+US_median_center2020 <-
+  readr_guess_encoding(
+    "https://www2.census.gov/geo/docs/reference/cenpop2020/CenPop2020_Median_US.txt",
+    col_types = cols(POPULATION = "i", LATITUDE = "d", LONGITUDE = "d")
+  )
+
 US_mean_center2010 <-
   readr_guess_encoding(
     "https://www2.census.gov/geo/docs/reference/cenpop2010/CenPop2010_Mean_US.txt",
@@ -190,17 +261,53 @@ US_median_center2010 <-
 ################################################################################
 # Write data
 usethis::use_data(
+  US_mean_center2020, US_median_center2020,
   US_mean_center2010, US_median_center2010,
+  state2020, county2020, tract2020, block_group2020,
   state2010, county2010, tract2010, block_group2010,
   state2000, county2000, tract2000, block_group2000,
-  overwrite = TRUE,
-  compress = "xz"
-)
-
-
-usethis::use_data(
-  US_mean_center2010, US_median_center2010,
   overwrite = TRUE,
   compress = "gzip"
 )
 
+paths <- fs::dir_ls(here::here("data"))
+
+gzip <-
+  paths %>%
+  tools::checkRdaFiles() %>%
+  as_tibble(rownames = "path") %>%
+  select(path, gzip_size = size)
+
+tools::resaveRdaFiles(paths, compress = "bzip2")
+
+bzip2 <-
+  paths %>%
+  tools::checkRdaFiles() %>%
+  as_tibble(rownames = "path") %>%
+  select(path, bzip2_size = size)
+
+tools::resaveRdaFiles(paths, compress = "xz")
+
+xz <-
+  paths %>%
+  tools::checkRdaFiles() %>%
+  as_tibble(rownames = "path") %>%
+  select(path, xz_size = size)
+
+size_comparison <-
+  gzip %>%
+  inner_join(bzip2, by = "path", suffix) %>%
+  inner_join(xz, by = "path") %>%
+  mutate(
+    min_size = c("gzip", "bzip2", "xz")[
+      max.col(across(!path, `-`), ties.method = "first")
+    ]
+  )
+
+size_comparison
+
+walk2(
+  size_comparison$path,
+  size_comparison$min_size,
+  tools::resaveRdaFiles
+)

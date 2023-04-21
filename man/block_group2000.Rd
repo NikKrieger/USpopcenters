@@ -78,5 +78,10 @@ Other 2000 census centers of population: \code{\link{state2000}};
   \code{\link{county2010}}; \code{\link{tract2010}};
   \code{\link{block_group2010}}; \code{\link{US_mean_center2010}};
   \code{\link{US_median_center2010}}
+
+  2020 census centers of population: \code{\link{state2020}};
+  \code{\link{county2020}}; \code{\link{tract2020}};
+  \code{\link{block_group2020}}; \code{\link{US_mean_center2020}};
+  \code{\link{US_median_center2020}}
 }
 \keyword{datasets}

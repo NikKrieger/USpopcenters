@@ -28,7 +28,7 @@ A \code{\link[tibble]{tibble}} with 66,304 rows and 6 variables:
 \source{
 The source file is at
   \url{https://www2.census.gov/geo/docs/reference/cenpop2000/tract/tract_pop.txt}.
-   The 2000 center of population info page is at
+  The 2000 center of population info page is at
   \url{https://www.census.gov/geographies/reference-files/time-series/geo/centers-population.2000.html}
 }
 \usage{
@@ -49,7 +49,7 @@ American Samoa, Guam, the Northern Mariana Islands, or the US Virgin Islands.
 }
 \section{US census data terms of service}{
 
-\url{https://www.census.gov/data/developers/about/terms-of-service.html}
+  \url{https://www.census.gov/data/developers/about/terms-of-service.html}
 }
 
 \examples{
@@ -63,5 +63,10 @@ Other 2000 census centers of population: \code{\link{state2000}};
   \code{\link{county2010}}; \code{\link{tract2010}};
   \code{\link{block_group2010}}; \code{\link{US_mean_center2010}};
   \code{\link{US_median_center2010}}
+
+  2020 census centers of population: \code{\link{state2020}};
+  \code{\link{county2020}}; \code{\link{tract2020}};
+  \code{\link{block_group2020}}; \code{\link{US_mean_center2020}};
+  \code{\link{US_median_center2020}}
 }
 \keyword{datasets}
